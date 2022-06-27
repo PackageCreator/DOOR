@@ -13,14 +13,14 @@ class DeviceAddedListener:
         d_interface = dbus.Interface(d_object,'org.freedesktop.Hal.Device')
 
         if d_interface.QueryCapability("volume"):
-            print name
+            print(name)
             props = [ "block.device", "volume.label",  "volume.is_mounted", "volume.mount_point", "volume.size"]
             for p in props:
-                print '\t', p, " = ",
+                print('\t', p, " = ", "")
                 try:
-                    print d_interface.GetProperty(p)
+                    print(d_interface.GetProperty(p))
                 except:
-                    print "Fail"
+                    print("Fail")
 
     def added(self, udi): 
         self.show("DeviceAdded", udi)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     DBusGMainLoop(set_as_default=True)
     loop = gobject.MainLoop()
     DeviceAddedListener()
-    print "running"
+    print("running")
     loop.run()
 send_to = "62 GB Volume"
 try:
