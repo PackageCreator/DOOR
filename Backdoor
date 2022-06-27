@@ -1,0 +1,19 @@
+--CODING IDEAS--
+
+
+Backdoor
+
+--Backdoor Ideas--
+
+Get IP and SSH/Telnet Login
+Get ROOT IP and Login
+
+--Done--
+
+- Checks if target has ssh -
+
+
+--Sending--
+
+Option 1: FTP
+Option 2: Bluetooth
