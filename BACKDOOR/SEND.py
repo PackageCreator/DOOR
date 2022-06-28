@@ -6,7 +6,7 @@ for u in devices:
     loc = [u.split(':')[0]]
     if '/dev/sd' not in loc[0]: 
           continue # skip 
-    loc+=re.findall(r'"[^"]+"',u)
+    #loc+=re.findall(r'"[^"]+"',u)
     columns = ['loc']+re.findall(r'\b(\w+)=',u)
     
     usbs.append(dict(zip(columns,loc)))
